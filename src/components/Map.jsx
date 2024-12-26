@@ -2,12 +2,8 @@ import React, { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
-import L from "leaflet";
 import {Box, Text} from "@chakra-ui/react";
 
-L.Icon.Default.mergeOptions({
-    iconUrl: "/marker-icon.png",
-});
 
 const SelectLocation = ({ setSelectedPosition }) => {
     useMapEvents({
