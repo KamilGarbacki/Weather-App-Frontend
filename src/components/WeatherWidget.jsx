@@ -46,7 +46,7 @@ export default function WeatherWidget(){
                 .then(result => {
                     setTableData(result.data);
                 }).catch(err => {
-                errorNotification(err.code, err.response.data.message);
+                errorNotification(err.code, "Could not fetch data from the backend");
                 console.error(err)
             }).finally(() => {
                 setLoadingTable(false);
@@ -58,7 +58,7 @@ export default function WeatherWidget(){
                     setFooterData(result.data);
                 })
                 .catch(err => {
-                    errorNotification(err.code, err.response.data.message);
+                    errorNotification(err.code, "Could not fetch data from the backend");
                     console.error(err)
                 })
                 .finally(() => {
@@ -98,7 +98,7 @@ export default function WeatherWidget(){
                             .then(result => {
                                 setTableData(result.data);
                             }).catch(err => {
-                            errorNotification(err.code, err.response.data.message);
+                            errorNotification(err.code, "Could not fetch data from the backend");
                             console.error(err)
                         })
 
@@ -108,7 +108,7 @@ export default function WeatherWidget(){
                                 setFooterData(result.data);
                             })
                             .catch(err => {
-                                errorNotification(err.code, err.response.data.message);
+                                errorNotification(err.code, "Could not fetch data from the backend");
                                 console.error(err)
                             })
                     }}/>
@@ -140,7 +140,7 @@ export default function WeatherWidget(){
                         .then(result => {
                             setTableData(result.data);
                         }).catch(err => {
-                        errorNotification(err.code, err.response.data.message);
+                        errorNotification(err.code, "Could not fetch data from the backend");
                         console.error(err);
                     })
 
@@ -150,7 +150,7 @@ export default function WeatherWidget(){
                             setFooterData(result.data);
                         })
                         .catch(err => {
-                            errorNotification(err.code, err.response.data.message);
+                            errorNotification(err.code, "Could not fetch data from the backend");
                             console.error(err);
                         })
                 }}/>
