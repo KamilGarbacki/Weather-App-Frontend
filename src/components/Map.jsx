@@ -3,7 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaf
 import "leaflet/dist/leaflet.css";
 
 import L from "leaflet";
-import {Box} from "@chakra-ui/react";
+import {Box, Text} from "@chakra-ui/react";
 
 L.Icon.Default.mergeOptions({
     iconUrl: "/marker-icon.png",
@@ -42,10 +42,16 @@ export default function MapComponent({ onLocationSelect, startingLocation }) {
             h="60vh"
             w="80%"
         >
+            <Text
+                mb={3}
+                fontSize={18}
+            >
+                Right-click on the map to select a new loacation
+            </Text>
             <MapContainer
                 center={startingLocation}
                 zoom={13}
-                style={{height: "100%", width: "100%"}}
+                style={{height: "90%", width: "100%"}}
                 scrollWheelZoom={false}
                 borderRadius="md"
                 >
@@ -57,7 +63,7 @@ export default function MapComponent({ onLocationSelect, startingLocation }) {
                 {selectedPosition && (
                     <Marker position={selectedPosition}>
                         <Popup>
-                            Selected Location: <br/> Lat: {selectedPosition[0]}, Lng: {selectedPosition[1]}
+                            You are here :)
                         </Popup>
                     </Marker>
                 )}
