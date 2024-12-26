@@ -5,9 +5,9 @@ import {Box, Text} from "@chakra-ui/react";
 import L from "leaflet";
 
 L.Icon.Default.mergeOptions({
-    iconUrl: "/marker-icon.png",
-    iconRetinaUrl: "/marker-icon-2x.png",
-    shadowUrl: "/marker-shadow.png",
+    iconUrl: `/marker-icon.png`,
+    iconRetinaUrl: `/marker-icon-2x.png`,
+    shadowUrl: `/marker-shadow.png`,
 });
 
 const SelectLocation = ({ setSelectedPosition }) => {
