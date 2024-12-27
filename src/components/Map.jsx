@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from 'react-leaflet';
 import "leaflet/dist/leaflet.css";
 import {Box, Text} from "@chakra-ui/react";
 import L from "leaflet";
+
+delete L.Icon.Default.prototype._getIconUrl;
 
 L.Icon.Default.mergeOptions({
     iconUrl: `/marker-icon.png`,
